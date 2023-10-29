@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GoORMHelperProjectSettings">
+    <option name="defaultORM" value="Gorm" />
+    <option name="defaultDatabase" value="MySQL" />
+  </component>
+</project>

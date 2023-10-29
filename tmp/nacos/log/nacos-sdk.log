@@ -1,0 +1,85 @@
+2023-09-13T17:38:01.590+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-09-16T20:40:23.319+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-09-17T11:34:44.394+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-02T16:20:56.850+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-02T16:30:21.604+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-02T16:31:26.155+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-06T16:25:37.349+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-21T20:29:53.636+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-21T20:29:53.638+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<Get "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=goods-srv&group=prd&tenant=75925006-7335-4af6-abcd-447122b61e92": dial tcp 127.0.0.1:8848: connectex: No connection could be made because the target machine actively refused it.> , result:<>
+2023-10-21T20:29:53.638+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<Get "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=goods-srv&group=prd&tenant=75925006-7335-4af6-abcd-447122b61e92": dial tcp 127.0.0.1:8848: connectex: No connection could be made because the target machine actively refused it.> , result:<>
+2023-10-21T20:29:53.639+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<Get "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=goods-srv&group=prd&tenant=75925006-7335-4af6-abcd-447122b61e92": dial tcp 127.0.0.1:8848: connectex: No connection could be made because the target machine actively refused it.> , result:<>
+2023-10-21T20:29:53.639+0800	[31mERROR[0m	config_client/config_client.go:202	get config from server error:Get "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=goods-srv&group=prd&tenant=75925006-7335-4af6-abcd-447122b61e92": dial tcp 127.0.0.1:8848: connectex: No connection could be made because the target machine actively refused it. 
+2023-10-21T20:30:15.292+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-21T20:30:15.293+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<Get "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=goods-srv&group=prd&tenant=75925006-7335-4af6-abcd-447122b61e92": dial tcp 127.0.0.1:8848: connectex: No connection could be made because the target machine actively refused it.> , result:<>
+2023-10-21T20:30:15.294+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<Get "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=goods-srv&group=prd&tenant=75925006-7335-4af6-abcd-447122b61e92": dial tcp 127.0.0.1:8848: connectex: No connection could be made because the target machine actively refused it.> , result:<>
+2023-10-21T20:30:15.294+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<Get "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=goods-srv&group=prd&tenant=75925006-7335-4af6-abcd-447122b61e92": dial tcp 127.0.0.1:8848: connectex: No connection could be made because the target machine actively refused it.> , result:<>
+2023-10-21T20:30:15.294+0800	[31mERROR[0m	config_client/config_client.go:202	get config from server error:Get "http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=goods-srv&group=prd&tenant=75925006-7335-4af6-abcd-447122b61e92": dial tcp 127.0.0.1:8848: connectex: No connection could be made because the target machine actively refused it. 
+2023-10-26T07:21:18.437+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-26T07:21:18.471+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-26T07:21:18.475+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-26T07:21:18.478+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"goods-srv","group":"prd","tenant":"75925006-7335-4af6-abcd-447122b61e92"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-26T07:21:18.478+0800	[31mERROR[0m	config_client/config_client.go:202	get config from server error:[404] config data not exist
+ 
+2023-10-26T07:21:18.479+0800	[33mWARN[0m	config_client/config_client.go:207	[client.GetConfig] config not found, dataId: goods-srv, group: prd, namespaceId: 75925006-7335-4af6-abcd-447122b61e92.
+2023-10-26T07:22:25.682+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-26T07:22:25.686+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-26T07:22:25.689+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-26T07:22:25.692+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-26T07:22:25.692+0800	[31mERROR[0m	config_client/config_client.go:202	get config from server error:[404] config data not exist
+ 
+2023-10-26T07:22:25.693+0800	[33mWARN[0m	config_client/config_client.go:207	[client.GetConfig] config not found, dataId: user-srv, group: prd, namespaceId: 8e74d537-a29a-48d8-97da-a105588c7d42.
+2023-10-26T07:33:10.333+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-26T07:33:42.654+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-26T07:45:03.122+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-26T07:50:48.854+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-26T08:00:33.485+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-26T08:01:39.509+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-26T08:58:41.657+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T16:46:56.623+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T19:51:13.425+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T19:51:13.437+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-28T19:51:13.443+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-28T19:51:13.447+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-28T19:51:13.447+0800	[31mERROR[0m	config_client/config_client.go:202	get config from server error:[404] config data not exist
+ 
+2023-10-28T19:51:13.447+0800	[33mWARN[0m	config_client/config_client.go:207	[client.GetConfig] config not found, dataId: user-srv, group: prd, namespaceId: 8e74d537-a29a-48d8-97da-a105588c7d42.
+2023-10-28T19:52:24.013+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T19:52:24.019+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-28T19:52:24.024+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-28T19:52:24.027+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"user-srv","group":"prd","tenant":"8e74d537-a29a-48d8-97da-a105588c7d42"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-10-28T19:52:24.027+0800	[31mERROR[0m	config_client/config_client.go:202	get config from server error:[404] config data not exist
+ 
+2023-10-28T19:52:24.027+0800	[33mWARN[0m	config_client/config_client.go:207	[client.GetConfig] config not found, dataId: user-srv, group: prd, namespaceId: 8e74d537-a29a-48d8-97da-a105588c7d42.
+2023-10-28T19:53:14.708+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T19:56:15.536+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T20:12:40.372+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T20:13:22.287+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T20:15:12.039+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-28T20:31:56.308+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-29T08:51:31.197+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-10-29T08:51:45.612+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
