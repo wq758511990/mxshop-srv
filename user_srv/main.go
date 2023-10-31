@@ -55,7 +55,7 @@ func main() {
 
 	// 生成check对象
 	check := &api.AgentServiceCheck{
-		GRPC:                           fmt.Sprintf("192.168.31.63:%d", *PORT),
+		GRPC:                           fmt.Sprintf("%s:%d", global.ServerConfig.Host, *PORT),
 		Timeout:                        "5s",
 		Interval:                       "5s",
 		DeregisterCriticalServiceAfter: "10s",
@@ -66,8 +66,8 @@ func main() {
 	serviceId := fmt.Sprintf("%s", uuid.NewV4())
 	registration.ID = serviceId
 	registration.Port = *PORT
-	registration.Tags = []string{"mxshop"}
-	registration.Address = "192.168.31.63"
+	registration.Tags = global.ServerConfig.Tags
+	registration.Address = global.ServerConfig.Host
 	registration.Check = check
 
 	if err := client.Agent().ServiceRegister(registration); err != nil {

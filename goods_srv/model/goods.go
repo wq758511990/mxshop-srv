@@ -39,10 +39,10 @@ type Banner struct {
 type Goods struct {
 	BaseModel
 	Category   Category
-	CategoryID int32 `gorm:"type:int;index:idx_category_brand,unique"`
+	CategoryID int32 `gorm:"type:int;index:idx_category_brand"`
 
 	Brand   Brand
-	BrandID int32 `gorm:"type:int;index:idx_category_brand,unique"`
+	BrandID int32 `gorm:"type:int;index:idx_category_brand"`
 
 	Name            string   `gorm:"type:varchar(50);not null"`
 	GoodsSn         string   `gorm:"type:varchar(50);not null"`

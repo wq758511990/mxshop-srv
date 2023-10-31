@@ -1,0 +1,16 @@
+{
+    "name": "user-srv",
+    "host": "10.172.23.7",
+    "tags": ["tag1", "tag2", "tag3", "user-srv"],
+    "mysql": {
+        "host": "10.172.23.7",
+        "port": 3306,
+        "name": "mxshop_user_srv",
+        "user": "user",
+        "password": "123456"
+    },
+    "consul": {
+        "host": "127.0.0.1",
+        "port": 8500
+    }
+}
