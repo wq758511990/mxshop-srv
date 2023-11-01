@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22cb76c6-1e89-4ef3-98a1-bb4b62de9fdb" name="Changes" comment="">
+    <list default="true" id="22cb76c6-1e89-4ef3-98a1-bb4b62de9fdb" name="Changes" comment="feat: categoryBrand 导入global调整">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods_srv/handler/brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/brand.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods_srv/handler/category_brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/category_brand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods_srv/handler/banner.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/banner.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,11 +108,32 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: categoryBrand 导入global调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: categoryBrand 导入global调整" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
