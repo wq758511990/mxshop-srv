@@ -49,6 +49,31 @@ func ModelToResponse(goods model.Goods) proto.GoodsInfoResponse {
 }
 
 func (s *GoodsServer) GoodsList(ctx context.Context, req *proto.GoodsFilterRequest) (*proto.GoodsListResponse, error) {
+	goodsListResponse := &proto.GoodsListResponse{}
+
+	var goods []model.Goods
+	result := global.DB.Find(&goods)
+	goodsListResponse.Total = int32(result.RowsAffected)
+	for _, good := range goods {
+		goodsListResponse.Data = append(goodsListResponse.Data, &proto.GoodsInfoResponse{
+			Id:         good.ID,
+			CategoryId: good.CategoryID,
+			Category: &proto.CategoryBriefInfoResponse{
+				Id:   good.CategoryID,
+				Name: good.Name,
+			},
+			Brand: &proto.BrandInfoResponse{
+				Id:   good.BrandID,
+				Name: good.Name,
+				Logo: good.Name,
+			},
+		})
+	}
+
+	return goodsListResponse, nil
+}
+
+func (s *GoodsServer) GoodsList1(ctx context.Context, req *proto.GoodsFilterRequest) (*proto.GoodsListResponse, error) {
 	//使用es的目的是搜索出商品的id来，通过id拿到具体的字段信息是通过mysql来完成
 	//我们使用es是用来做搜索的， 是否应该将所有的mysql字段全部在es中保存一份
 	//es用来做搜索，这个时候我们一般只把搜索和过滤的字段信息保存到es中
@@ -144,7 +169,7 @@ func (s *GoodsServer) GoodsList(ctx context.Context, req *proto.GoodsFilterReque
 
 }
 
-// //现在用户提交订单有多个商品，你得批量查询商品的信息吧
+// 现在用户提交订单有多个商品，你得批量查询商品的信息吧
 func (s *GoodsServer) BatchGetGoods(ctx context.Context, req *proto.BatchGoodsIdInfo) (*proto.GoodsListResponse, error) {
 	goodsListResponse := &proto.GoodsListResponse{}
 

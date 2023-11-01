@@ -3,9 +3,9 @@ package model
 type Category struct {
 	BaseModel
 	Name             string      `gorm:"type:varchar(20);not null" json:"name"`
-	ParentCategory   *Category   `json:"parent"`
+	ParentCategory   *Category   `json:"-"`
 	SubCategory      []*Category `gorm:"foreignKey:ParentCategoryID;references:ID" json:"sub_category"`
-	ParentCategoryID int32       `json:"-"`
+	ParentCategoryID int32       `json:"parent"`
 	Level            int32       `gorm:"type:int;not null;default:1" json:"level"`
 	IsTab            bool        `gorm:"default:false;not null" json:"is_tab"`
 }
@@ -13,16 +13,16 @@ type Category struct {
 type Brand struct {
 	BaseModel
 	Name string `gorm:"type:varchar(20);not null"`
-	Logo string `gorm:"varchar(200);default: '';not null"`
+	Logo string `gorm:"type:varchar(200);default:'';not null"`
 }
 
 type GoodsCategoryBrand struct {
 	BaseModel
-	Category   Category
 	CategoryID int32 `gorm:"type:int;index:idx_category_brand,unique"`
+	Category   Category
 
-	Brand   Brand
 	BrandID int32 `gorm:"type:int;index:idx_category_brand,unique"`
+	Brand   Brand
 }
 
 func (GoodsCategoryBrand) TableName() string {
@@ -38,11 +38,16 @@ type Banner struct {
 
 type Goods struct {
 	BaseModel
-	Category   Category
-	CategoryID int32 `gorm:"type:int;index:idx_category_brand"`
 
-	Brand   Brand
-	BrandID int32 `gorm:"type:int;index:idx_category_brand"`
+	CategoryID int32 `gorm:"type:int;not null"`
+	Category   Category
+	BrandID    int32 `gorm:"type:int;not null"`
+	Brand      Brand
+
+	OnSale   bool `gorm:"default:false;not null"`
+	ShipFree bool `gorm:"default:false;not null"`
+	IsNew    bool `gorm:"default:false;not null"`
+	IsHot    bool `gorm:"default:false;not null"`
 
 	Name            string   `gorm:"type:varchar(50);not null"`
 	GoodsSn         string   `gorm:"type:varchar(50);not null"`
@@ -55,10 +60,6 @@ type Goods struct {
 	Images          GormList `gorm:"type:varchar(1000);not null"`
 	DescImages      GormList `gorm:"type:varchar(1000);not null"`
 	GoodsFrontImage string   `gorm:"type:varchar(200);not null"`
-	OnSale          bool     `gorm:"default:false;not null"`
-	ShipFree        bool     `gorm:"default:false;not null"`
-	IsNew           bool     `gorm:"default:false;not null"`
-	IsHot           bool     `gorm:"default:false;not null"`
 }
 
 // 性能上考虑 不采用新建一个表 去join的方式

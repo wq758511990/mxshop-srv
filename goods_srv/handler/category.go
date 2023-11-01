@@ -6,31 +6,13 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/emptypb"
+	"mxshop_srvs/goods_srv/global"
 	"mxshop_srvs/goods_srv/model"
 	"mxshop_srvs/goods_srv/proto"
-	"mxshop_srvs/user_srv/global"
 )
 
-// 商品分类
+// GetAllCategorysList 商品分类
 func (s *GoodsServer) GetAllCategorysList(ctx context.Context, req *emptypb.Empty) (*proto.CategoryListResponse, error) {
-	/*
-		[
-			{
-				"id":xxx,
-				"name":"",
-				"level":1,
-				"is_tab":false,
-				"parent":13xxx,
-				"sub_category":[
-					"id":xxx,
-					"name":"",
-					"level":1,
-					"is_tab":false,
-					"sub_category":[]
-				]
-			}
-		]
-	*/
 	var categories []model.Category
 	global.DB.Where(&model.Category{Level: 1}).Preload("SubCategory.SubCategory").Find(&categories)
 	b, _ := json.Marshal(&categories)
@@ -39,7 +21,7 @@ func (s *GoodsServer) GetAllCategorysList(ctx context.Context, req *emptypb.Empt
 	}, nil
 }
 
-// 获取子分类
+// GetSubCategory 获取子分类
 func (s *GoodsServer) GetSubCategory(ctx context.Context, req *proto.CategoryListRequest) (*proto.SubCategoryListResponse, error) {
 	categoryListResponse := proto.SubCategoryListResponse{}
 
@@ -71,6 +53,74 @@ func (s *GoodsServer) GetSubCategory(ctx context.Context, req *proto.CategoryLis
 	return &categoryListResponse, nil
 }
 
-//CreateCategory(context.Context, *CategoryInfoRequest) (*CategoryInfoResponse, error)
-//DeleteCategory(context.Context, *DeleteCategoryRequest) (*emptypb.Empty, error)
-//UpdateCategory(context.Context, *CategoryInfoRequest) (*emptypb.Empty, error)
+func (s *GoodsServer) CreateCategory(ctx context.Context, req *proto.CategoryInfoRequest) (*proto.CategoryInfoResponse, error) {
+	var category model.Category
+	if req.ParentCategory > 0 {
+		if result := global.DB.First(&category, req.ParentCategory); result.RowsAffected == 0 {
+			return nil, status.Errorf(codes.InvalidArgument, "parentId不存在")
+		}
+	}
+	categoryForm := model.Category{
+		IsTab: req.IsTab,
+		Name:  req.Name,
+		Level: req.Level,
+	}
+	if req.ParentCategory > 0 {
+		categoryForm.ParentCategoryID = req.ParentCategory
+	}
+	tx := global.DB.Begin()
+	result := tx.Save(&categoryForm)
+	if result.Error != nil {
+		tx.Rollback()
+		return nil, result.Error
+	}
+	tx.Commit()
+	return &proto.CategoryInfoResponse{
+		Id: categoryForm.ID,
+	}, nil
+}
+
+func (s *GoodsServer) DeleteCategory(ctx context.Context, req *proto.DeleteCategoryRequest) (*emptypb.Empty, error) {
+	var category model.Category
+	if result := global.DB.First(&category, req.Id); result.RowsAffected == 0 {
+		return nil, status.Errorf(codes.InvalidArgument, "删除分类不存在")
+	}
+	tx := global.DB.Begin()
+	// TODO: 待补充
+	result := tx.Delete(&model.Category{}, req.Id)
+	if result.Error != nil {
+		tx.Rollback()
+		return nil, result.Error
+	}
+	tx.Commit()
+	var subCategories []model.Category
+	global.DB.Where(&model.Category{ParentCategoryID: req.Id}).Find(&subCategories)
+	// 递归删除
+	for _, child := range subCategories {
+		s.DeleteCategory(ctx, &proto.DeleteCategoryRequest{
+			Id: child.ID,
+		})
+	}
+	return &emptypb.Empty{}, nil
+}
+
+func (s *GoodsServer) UpdateCategory(ctx context.Context, req *proto.CategoryInfoRequest) (*emptypb.Empty, error) {
+	var category model.Category
+	if result := global.DB.First(&category, req.Id); result.RowsAffected == 0 {
+		return nil, status.Errorf(codes.InvalidArgument, "分类不存在")
+	}
+	category.ID = req.Id
+	category.Name = req.Name
+	category.Level = req.Level
+	category.IsTab = req.IsTab
+	category.ParentCategoryID = req.ParentCategory
+
+	tx := global.DB.Begin()
+	result := tx.Save(&category)
+	if result.Error != nil {
+		tx.Rollback()
+		return nil, result.Error
+	}
+	tx.Commit()
+	return &emptypb.Empty{}, nil
+}

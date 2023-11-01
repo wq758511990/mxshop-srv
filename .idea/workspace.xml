@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22cb76c6-1e89-4ef3-98a1-bb4b62de9fdb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GOHCache.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/goORMHelperCache.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/goORMHelperSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mxshop_srvs.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods_srv/config-prd.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/config-prd.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods_srv/handler/category.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/category.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods_srv/handler/goods.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/goods.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/goods_srv/model/goods.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/model/goods.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_srv/config-prd.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/user_srv/config-prd.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_srv/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_srv/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_srv/global/global.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_srv/global/global.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user_srv/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/user_srv/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +31,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
   <component name="ProjectId" id="2XSjZBloGJx1hlm3ZbzxPLonPQg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -84,6 +80,7 @@
       <module name="mxshop-srv" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
+      <package value="mxshop_srvs" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$/goods_srv/main.go" />
       <method v="2" />
