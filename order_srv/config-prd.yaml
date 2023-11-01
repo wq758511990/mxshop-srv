@@ -1,0 +1,7 @@
+host: '127.0.0.1'
+port: 8848
+namespace: 'a7565e8c-b51b-4f4f-8dc6-14b0a0a94064'
+user: 'nacos'
+password: 'nacos'
+dataid: 'order-srv'
+group: 'prd'

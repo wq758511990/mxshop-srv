@@ -1,0 +1,22 @@
+{
+    "name": "order-srv",
+    "host": "10.172.23.7",
+    "tags": ["tag1", "tag2", "tag3", "order"],
+    "mysql": {
+        "host": "10.172.23.7",
+        "port": 3306,
+        "name": "mxshop_order_srv",
+        "user": "user",
+        "password": "123456"
+    },
+    "consul": {
+        "host": "127.0.0.1",
+        "port": 8500
+    },
+    "goods_srv": {
+        "name": "goods_srv"
+    },
+    "inventory_srv": {
+        "name": "inventory_srv"
+    }
+}
