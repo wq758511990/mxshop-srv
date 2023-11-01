@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22cb76c6-1e89-4ef3-98a1-bb4b62de9fdb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods_srv/handler/category.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/category.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods_srv/handler/goods.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/goods.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/goods_srv/model/goods.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/model/goods.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods_srv/handler/brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/brand.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods_srv/handler/category_brand.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/handler/category_brand.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

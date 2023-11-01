@@ -5,9 +5,9 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/emptypb"
+	"mxshop_srvs/goods_srv/global"
 	"mxshop_srvs/goods_srv/model"
 	"mxshop_srvs/goods_srv/proto"
-	"mxshop_srvs/user_srv/global"
 )
 
 // 品牌分类
@@ -52,7 +52,7 @@ func (s *GoodsServer) GetCategoryBrandList(ctx context.Context, req *proto.Categ
 	}
 
 	var categoryBrands []model.GoodsCategoryBrand
-	if result := global.DB.Preload("Brands").Where(&model.GoodsCategoryBrand{CategoryID: req.Id}).Find(&categoryBrands); result.RowsAffected > 0 {
+	if result := global.DB.Preload("Brand").Where(&model.GoodsCategoryBrand{CategoryID: req.Id}).Find(&categoryBrands); result.RowsAffected > 0 {
 		brandListResponse.Total = int32(result.RowsAffected)
 	}
 	var brandInfoResponse []*proto.BrandInfoResponse
