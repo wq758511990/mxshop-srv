@@ -5,20 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22cb76c6-1e89-4ef3-98a1-bb4b62de9fdb" name="Changes" comment="feat: categoryBrand 导入global调整">
-      <change afterPath="$PROJECT_DIR$/inventory_srv/proto/inventory.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/handler/order.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/proto/goods.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/proto/goods.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/proto/inventory.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/proto/inventory.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/proto/order.pb.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/proto/order.proto" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userop_srv/handler/address.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userop_srv/handler/userfav.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/userop_srv/proto/address.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_srv/model/inventory.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_srv/utils/redis_lock/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory_srv/utils/register/consul/register.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order_srv/handler/base.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order_srv/model/order.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory_srv/handler/inventory.go" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_srv/handler/inventory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory_srv/initialize/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_srv/initialize/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory_srv/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_srv/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_srv/handler/order.go" beforeDir="false" afterPath="$PROJECT_DIR$/order_srv/handler/order.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_srv/initialize/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/order_srv/initialize/db.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,42 +47,43 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2XSjZBloGJx1hlm3ZbzxPLonPQg" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/Users/wangzixin/GolandProjects/mxshop-srv/userop_srv/handler",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.general"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/wangzixin/GolandProjects/mxshop-srv/order_srv/handler&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/order_srv/handler" />
+      <recent name="$PROJECT_DIR$/inventory_srv/utils/register" />
       <recent name="$PROJECT_DIR$/userop_srv/handler" />
       <recent name="$PROJECT_DIR$/userop_srv/proto" />
       <recent name="$PROJECT_DIR$/order_srv/proto" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (4)">
+  <component name="RunManager" selected="Go Build.go build main.go (2)">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="mxshop_srvs" />
       <working_directory value="$PROJECT_DIR$" />
@@ -146,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go (4)" />
-        <item itemvalue="Go Build.go build main.go (3)" />
         <item itemvalue="Go Build.go build main.go (2)" />
-        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build main.go (3)" />
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build main.go (4)" />
       </list>
     </recent_temporary>
   </component>

@@ -8,6 +8,7 @@ import (
 	"gorm.io/gorm/schema"
 	"log"
 	"mxshop_srvs/inventory_srv/global"
+	"mxshop_srvs/inventory_srv/model"
 	"os"
 	"time"
 )
@@ -35,5 +36,5 @@ func InitDB() {
 	if err != nil {
 		panic(err)
 	}
-	_ = global.DB.AutoMigrate()
+	_ = global.DB.AutoMigrate(&model.Inventory{}, &model.StockSellDetail{})
 }
