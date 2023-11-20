@@ -2,7 +2,6 @@ package initialize
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/nacos-group/nacos-sdk-go/clients"
 	"github.com/nacos-group/nacos-sdk-go/common/constant"
 	"github.com/nacos-group/nacos-sdk-go/vo"
@@ -71,7 +70,5 @@ func InitConfig() {
 	if err := json.Unmarshal([]byte(content), &global.ServerConfig); err != nil {
 		panic(err)
 	}
-
-	fmt.Println("globalServer", global.ServerConfig)
 
 }

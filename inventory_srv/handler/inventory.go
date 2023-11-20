@@ -217,7 +217,6 @@ func (*InventoryServer) CancelSell(ctx context.Context, req *proto.SellInfo) (*e
 		if err := mutex.Lock(); err != nil {
 			return nil, status.Errorf(codes.Internal, "获取redis分布式锁异常")
 		}
-
 		if result := global.DB.Where(&model.Inventory{Goods: goodInfo.GoodsId}).First(&inv); result.RowsAffected == 0 {
 			tx.Rollback() //回滚之前的操作
 			return nil, status.Errorf(codes.InvalidArgument, "没有库存信息")

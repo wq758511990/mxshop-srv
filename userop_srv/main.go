@@ -36,9 +36,9 @@ func main() {
 	zap.S().Info("port: ", *PORT)
 	flag.Parse()
 	server := grpc.NewServer()
-	proto.RegisterAddressServer(server, &handler.AddressServer{})
-	proto.RegisterMessageServer(server, &handler.MessageServer{})
-	proto.RegisterUserFavServer(server, &handler.UserFavServer{})
+	proto.RegisterAddressServer(server, &handler.UserOpServer{})
+	proto.RegisterMessageServer(server, &handler.UserOpServer{})
+	proto.RegisterUserFavServer(server, &handler.UserOpServer{})
 	lis, err := net.Listen("tcp", fmt.Sprintf("%s:%d", *IP, *PORT))
 	if err != nil {
 		panic("fail to listen: " + err.Error())

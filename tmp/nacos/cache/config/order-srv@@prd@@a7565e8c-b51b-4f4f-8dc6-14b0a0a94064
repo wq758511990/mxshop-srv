@@ -1,9 +1,9 @@
 {
     "name": "order-srv",
-    "host": "10.172.23.7",
+    "host": "10.172.23.17",
     "tags": ["tag1", "tag2", "tag3", "order"],
     "mysql": {
-        "host": "10.172.23.7",
+        "host": "10.172.23.17",
         "port": 3306,
         "name": "mxshop_order_srv",
         "user": "user",

@@ -5,21 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22cb76c6-1e89-4ef3-98a1-bb4b62de9fdb" name="Changes" comment="feat: categoryBrand 导入global调整">
-      <change afterPath="$PROJECT_DIR$/inventory_srv/model/inventory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_srv/utils/redis_lock/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory_srv/utils/register/consul/register.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/handler/base.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order_srv/model/order.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/statistics.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userop_srv/handler/base.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/userop_srv/model/userop.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/goods_srv/initialize/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/goods_srv/initialize/config.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory_srv/handler/inventory.go" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_srv/handler/inventory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory_srv/initialize/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_srv/initialize/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory_srv/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/inventory_srv/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order_srv/handler/order.go" beforeDir="false" afterPath="$PROJECT_DIR$/order_srv/handler/order.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order_srv/initialize/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/order_srv/initialize/db.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/nacos/cache/config/goods-srv@@prd@@d483d15f-5878-4c3a-832e-113f3537386c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/cache/config/goods-srv@@prd@@d483d15f-5878-4c3a-832e-113f3537386c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/nacos/cache/config/inventory-srv@@prd@@437b8626-f974-46e2-a958-3e9f6b33b18c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/cache/config/inventory-srv@@prd@@437b8626-f974-46e2-a958-3e9f6b33b18c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/nacos/cache/config/order-srv@@prd@@a7565e8c-b51b-4f4f-8dc6-14b0a0a94064" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/cache/config/order-srv@@prd@@a7565e8c-b51b-4f4f-8dc6-14b0a0a94064" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/nacos/cache/config/user-srv@@prd@@b2e61515-47db-4d9f-888a-abe20bef50ef" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/cache/config/user-srv@@prd@@b2e61515-47db-4d9f-888a-abe20bef50ef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/nacos/cache/config/userop-srv@@prd@@13c7c38d-52f5-4f38-85fb-112445c3049c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/cache/config/userop-srv@@prd@@13c7c38d-52f5-4f38-85fb-112445c3049c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/nacos/log/nacos-sdk.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userop_srv/handler/address.go" beforeDir="false" afterPath="$PROJECT_DIR$/userop_srv/handler/address.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userop_srv/handler/message.go" beforeDir="false" afterPath="$PROJECT_DIR$/userop_srv/handler/message.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userop_srv/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/userop_srv/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userop_srv/model/base.go" beforeDir="false" afterPath="$PROJECT_DIR$/userop_srv/model/base.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/userop_srv/model/main/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/userop_srv/model/main/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,35 +56,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/wangzixin/GolandProjects/mxshop-srv/order_srv/handler&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/wangzixin/GolandProjects/mxshop-srv/userop_srv/model/main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.general"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/userop_srv/model/main" />
+      <recent name="$PROJECT_DIR$/userop_srv/handler" />
       <recent name="$PROJECT_DIR$/order_srv/handler" />
       <recent name="$PROJECT_DIR$/inventory_srv/utils/register" />
-      <recent name="$PROJECT_DIR$/userop_srv/handler" />
       <recent name="$PROJECT_DIR$/userop_srv/proto" />
-      <recent name="$PROJECT_DIR$/order_srv/proto" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/userop_srv/model" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (2)">
+  <component name="RunManager" selected="Go Build.go build main.go (1)">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="mxshop_srvs" />
       <working_directory value="$PROJECT_DIR$" />
@@ -147,10 +151,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go (2)" />
         <item itemvalue="Go Build.go build main.go (1)" />
-        <item itemvalue="Go Build.go build main.go (3)" />
         <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build main.go (2)" />
+        <item itemvalue="Go Build.go build main.go (3)" />
         <item itemvalue="Go Build.go build main.go (4)" />
       </list>
     </recent_temporary>
